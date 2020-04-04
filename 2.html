@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st way ~ Toggle Vertical</title>
+    <style>
+        body{
+            background-color: #dcdcdc;;
+        }
+        .toggle input{
+            display: none;
+        }
+        .toggle .bg{
+            background-color: #fff;
+            padding:  0.0em 0.0em  0.2em 0.0em;
+            width: 1em;
+            height: 1.8em;
+            border-radius: 2em;
+            cursor: pointer;
+            box-shadow: inset 0 0 5px #ccc;
+            position: relative;
+            top: 1.22em;
+            left: 0.2em;
+            z-index: -1;
+            transition: 0.5s;
+            display: flex;
+        }
+        .toggle input:checked~.bg{
+            background-color: #ec4d69;
+            box-shadow: inset 0 0 5px #666;
+        }
+        .toggle .tumbler{
+            background-color: #fff;
+            width: 1.1em;
+            height: 1.1em;
+            box-shadow: 0 2px 5px #3e3e3e;
+            border-radius: 1em;
+            transition: 0.5s;
+        }
+        .toggle input:checked+div>.tumbler {
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+
+        <label class="toggle">
+            <input type="checkbox">
+            <div class="bg">
+                <div class="tumbler"></div>
+            </div>
+        </label>
+
+</body>
+</html>
